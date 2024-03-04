@@ -13,12 +13,14 @@ import tropics8 from "./assets/jamaica8.jpg";
 import tropics9 from "./assets/jamaica9.jpg";
 import tropics10 from "./assets/jamaica10.jpg";
 
+// images for the carousel
+const IMAGES = [tropics1, tropics2, tropics3, tropics4, tropics5, tropics6, tropics7, tropics8, tropics9, tropics10]
 
 export default function Page() {
   return (
     <>
      <NavBar/>
-     <Carousel/>
+     <Carousel imageURLs = {IMAGES}/>
     </>
   );
   
