@@ -10,15 +10,32 @@ type ImageSliderProps = {
     imageURLs: StaticImageData[]
 }
 
+
 export default function Carousel({ imageURLs }: ImageSliderProps){
     const [imageIndex, setImageIndex] = useState(0)
 
+    // function with algorithm to move a current image to the previous image
+    function previousImage(){
+        setImageIndex( index => {
+            if (imageIndex === 0) return imageURLs.length - 1
+            else return index - 1
+        })
+    }
+
+// function with algorithm to move a current image to the next image
+function nextImage(){
+    setImageIndex( index  => {
+        if (imageIndex === imageURLs.length - 1) return 0
+        else return index + 1
+    })
+}
+
     return(
         <>
-        <div className="slider">
-            <Image className="slider_image" src={imageURLs[imageIndex]} alt={'company logo'}/> 
-            <button><ArrowBigLeft/></button>
-            <button><ArrowBigRight/></button>
+        <div className="carousel">
+            <Image className="carousel_image" src={imageURLs[imageIndex]} alt={'company logo'}/> 
+            <button onClick={previousImage} className="carousel_button left"><ArrowBigLeft/></button>
+            <button onClick={nextImage} className="carousel_button right"><ArrowBigRight/></button>
         </div>
         </>
     );
