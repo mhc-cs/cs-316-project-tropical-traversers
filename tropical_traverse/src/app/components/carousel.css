@@ -22,6 +22,7 @@
     height: auto;
     aspect-ratio: 6/2.8;
     display: block;
+    transition: 0.2s ease-in-out;
 }
 
 /* style for arrow buttons in the carousel */
@@ -43,8 +44,7 @@
 
 .carousel_button > * {
     stroke: white;
-    fill: black;
-    width: 2rem;
+    width: 5rem;
     height: auto;
 }
 
@@ -57,3 +57,36 @@
     left: 0;
 }
 
+.plan_trip{
+    color: #FFFFFF;
+    background-color: #F4CE39;
+    border: none;
+    border-radius: 10px;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 2%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* style for text on the carousel */
+.carouselText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.welcomeText{
+    color: #FFFFFF;
+    font-size: 500%;
+}
+
+.travelText{
+    color: #2F342F;
+    font-size: 200%;
+    background: rgba(255, 255, 255, .15)
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import NavBar from "./components/navbar";
+import LoginForm from "./components/loginform"
 import Carousel from "./components/carousel";
 import tropics1 from "./assets/jamaica1.jpg";
 import tropics2 from "./assets/jamaica2.jpg";
@@ -21,7 +22,7 @@ export default function Page() {
     <>
      <NavBar/>
      <Carousel imageURLs = {IMAGES}/>
+     <LoginForm />
     </>
   );
-  
 }
