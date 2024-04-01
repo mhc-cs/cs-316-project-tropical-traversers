@@ -1,11 +1,4 @@
 {
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "mongoose": "^8.2.1"
-  },
-  "type": "module"
-}
-{
   "name": "tropical_traverse",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +16,9 @@
     "node.js": "^0.0.1-security",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
