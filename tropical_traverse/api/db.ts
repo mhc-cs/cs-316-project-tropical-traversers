@@ -14,4 +14,4 @@ const helloSchema = new mongoose.Schema({
 const HelloModel = mongoose.model ('messages', helloSchema);
 
 // Make the model and schema available
-module.exports = HelloModel;
+//module.exports = HelloModel;
