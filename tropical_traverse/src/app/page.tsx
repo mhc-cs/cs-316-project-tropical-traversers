@@ -18,6 +18,8 @@ import tropics10 from "./assets/jamaica10.jpg";
 import LoginPage from "./components/loginform";
 import AppRoutes from "./components/routes";
 
+import SignUp from "./components/signup";
+
 // images for the carousel
 const IMAGES = [tropics1, tropics2, tropics3, tropics4, tropics5, tropics6, tropics7, tropics8, tropics9, tropics10]
 
@@ -27,7 +29,7 @@ export default function Page() {
      <NavBar/>
      <Carousel imageURLs = {IMAGES}/>
      {/* <AppRoutes /> */}
-     <LoginPage/>
+     <SignUp/>
     </>
   );
 }
