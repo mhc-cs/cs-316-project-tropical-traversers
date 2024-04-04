@@ -1,6 +1,6 @@
 import LoginButton from './login_button';
 import './navbar.css';
-import logo from '../assets/island_tours.png';
+import logo from '../../assets/island_tours.png';
 import Image from 'next/image';
 import './button.css'
 
@@ -26,6 +26,6 @@ export default function NavBar(){
                 <li><a href="#about">Contact</a></li>
             </ul>        
         </div>
-            </>
+        </>
     );
   }

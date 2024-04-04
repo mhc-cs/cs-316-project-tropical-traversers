@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { StaticImageData } from "next/image";
 import Image from 'next/image';
-import './button.css';
+// import '../navBar/button.css';
 import CarouselText from "./carouselText";
 
 type ImageSliderProps = {

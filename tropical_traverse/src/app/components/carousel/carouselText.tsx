@@ -1,5 +1,5 @@
-import "../components/navbar.css"
-import "../components/carousel.css"
+import "../navBar/navbar.css"
+import "./carousel.css"
 
 export default function carouselText(){
     return(
