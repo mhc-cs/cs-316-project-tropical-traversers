@@ -9,7 +9,6 @@ export default function carouselText(){
             <h3 className="travelText">Travel to Jamaica</h3>
             <button className='plan_trip'>Plan Your Trip</button>
         </div>
-        
         </>
     );
 }
