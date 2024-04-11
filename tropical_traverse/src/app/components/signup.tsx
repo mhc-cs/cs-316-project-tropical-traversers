@@ -1,5 +1,4 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
+//Set up schema differences, make an account type to add to schema
 
 "use client"; //In order to define a use client <--- very important otherwise the page won't load
 
@@ -14,7 +13,8 @@ const CreateAcc: React.FC = () => {
     nameF: '',
     username: '',
     email: '',
-    password: ''
+    password: '',
+    type: ''
   })
 
   //input type event handler
@@ -37,12 +37,14 @@ const CreateAcc: React.FC = () => {
       nameF: input.nameF,
       username: input.username,
       email: input.email,
-      password: input.password
+      password: input.password,
+      type: 'user'
     }
 
-    axios.post('http://localhost:4000/create', newAcc)
+    axios.post('http://localhost:5000/userAccounts', newAcc)
   }
 
+  // ~~~ TODO add last name and phone number
   //input receiver, texts bars, and submit button
   return <div className ='container'>
     <h1>Add Username</h1>
@@ -69,3 +71,4 @@ const CreateAcc: React.FC = () => {
 }
 
 export default CreateAcc;
+

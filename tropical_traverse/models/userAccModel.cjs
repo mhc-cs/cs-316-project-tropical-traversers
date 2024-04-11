@@ -1,12 +1,14 @@
-const mongoose = require("mongoose")
+//NOT USED
 
-const userAccSchema = {
-    nameF: String,
-    username: String,
-    email: String,
-    password: String,
-}
+// const mongoose = require("mongoose")
 
-const userAcc = mongoose.model("userAcc", notesSchema)
+// const userAccSchema = {
+//     nameF: String,
+//     username: String,
+//     email: String,
+//     password: String,
+// }
 
-module.exports = userAcc
+// const userAcc = mongoose.model("userAcc", notesSchema)
+
+// module.exports = userAcc
