@@ -1,4 +1,4 @@
-"use client"; //this tells the client
+"use client"; //this tells it to use the client
 
 import './carousel.css'
 import { useState } from "react";

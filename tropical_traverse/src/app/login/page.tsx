@@ -3,13 +3,14 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import "./login.css";
+import router, { useRouter } from "next/navigation";
 
 const CreateAcc: React.FC = () => {
 
   
   //account constants for data
   const [input, setInput] = useState({
-    email: '',
+    username: '',
     password: ''
   })
 
@@ -29,22 +30,24 @@ const CreateAcc: React.FC = () => {
   function handleClick(event:React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault()
     const newAcc = {
-      email: input.email,
+      username: input.username,
       password: input.password
     }
 
     axios.post('http://localhost:4000/create', newAcc)
   }
 
+  const url = "/signUp/";
+  const router = useRouter();
   //input receiver, texts bars, and submit button
   return <div className ='container'>
 
       <form>
-      <h1>Create Account</h1>
-        <input onChange={handleChange} name="email" value = {input.email} className="form-control" placeholder="Email"></input>
+      <h1>Login</h1>
+        <input onChange={handleChange} name="username" value = {input.username} className="form-control" placeholder="Username"></input>
         <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password"></input>
         <button onClick ={handleClick}className="btn btn-lg btn-info">Login</button>
-        <span>New to Island Tours? <b>Create account</b> </span>
+        <span>New to Island Tours? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Create Account</b></button>  </span>
       </form>
   </div>
 }
