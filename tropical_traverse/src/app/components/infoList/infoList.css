@@ -1,0 +1,10 @@
+.title{
+    font-size: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}

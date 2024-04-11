@@ -1,0 +1,64 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/background4.jpg");
+}
+
+form{
+    background-color: lightgray;
+    /* margin: 10% 35%; */
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    border-radius: 2%;
+    position: relative;
+    top: 20%;
+    left: 35%;
+}
+
+h1{
+    color: rgb(4, 85, 93);
+    font-size: 200%;
+    padding: 5%;
+}
+
+.form-control{
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    /* color: white; */
+    padding-left: 5%;
+    margin: 3%;
+
+    &::placeholder{
+        color: lightgrey;
+    }
+}
+
+.btn{
+    margin: 3%;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 100%;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: rgb(2, 54, 76);
+    color: white;
+}
+
+span{
+    color: gray;
+    font-size: 80%;
+
+    button{
+        all:unset;
+    }
+}
+
+b{
+    color: rgb(236, 236, 236);
+    cursor: pointer;
+}

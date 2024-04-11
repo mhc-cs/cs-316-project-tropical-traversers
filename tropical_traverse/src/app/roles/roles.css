@@ -1,0 +1,45 @@
+.optionContainer{
+    background-color: rgb(253, 184, 55);
+    display: flex;
+    text-align: center;
+    padding: 10%;
+    flex-direction: column;
+}
+
+h3{
+    padding: 2%;
+}
+.role_Iam{
+    font-size: 250%;
+}
+
+.driverButton{
+    padding: 3% 8%;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.driverButton:hover{
+    transform: scale(1.1); 
+}
+
+.userButton{
+    padding: 3% 8%;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.userButton:hover{
+    transform: scale(1.1); 
+}
+
+h4{
+    font-size: 150%;
+}
+
