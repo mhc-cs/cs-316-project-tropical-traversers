@@ -1,6 +1,13 @@
 {
   "dependencies": {
     "mongodb": "^6.4.0",
-    "mongoose": "^8.2.1"
+    "mongoose": "^8.2.1",
+    "dotenv":  "^10.0.0"
+  },
+  "scripts": {
+    "start-server": "echo Starting server && node ./server/connect.cjs",
+    "start-react": "cd client && npm start",
+    "dev": "concurrently \"npm run start-server\" \"npm run start-react\""
   }
 }
+
