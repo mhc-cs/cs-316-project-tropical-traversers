@@ -1,8 +1,6 @@
-"usecllient";
+"useclient";
 
-import { ChevronRight, ChevronLeft } from "lucide-react";
-import './infoList.css'
-import Item from  "../infolistitem/infoListItem";
+import './infoList.css';
 import destination1 from "../../assets/top_destinations/dest1.jpg";
 import destination2 from "../../assets/top_destinations/dest2.jpg";
 import destination3 from "../../assets/top_destinations/dest3.jpg";
@@ -13,7 +11,13 @@ import { StaticImageData } from "next/image";
 import { useState } from "react";
 import Image from 'next/image';
 
-const destImages = [destination1, destination2, destination3, destination4, destination5, destination6]
+const destImages = [
+  {src: destination1, caption:"Kingston"}, 
+  {src: destination2, caption:"Montego Bay"}, 
+  {src: destination3, caption:"Negril"}, 
+  {src: destination4, caption:"Falmouth"}, 
+  {src: destination5, caption:"Ocho Rios"}, 
+  {src: destination6, caption:"Portmore"}];
 
 type ImageSliderProps = {
   imageURLs: StaticImageData[]
@@ -26,9 +30,12 @@ export default function topThings(){
           <span className="title">Top Destinations</span>
         </div>
         <div className="wrapper">
-          <button className=""><ChevronLeft/></button>
-          <Item/>
-          <button className=""><ChevronRight/></button>
+          {destImages.map((imageUrl, index) => (
+            <div key={index} className='image-wrapper'>
+              <Image className='image'  src={imageUrl.src} alt={imageUrl.caption}/>
+              <span className='destination-name'>{imageUrl.caption}</span>
+            </div>
+          ))}
         </div>
         </>
       );
