@@ -1,4 +1,5 @@
 //TO RUN SERVER IN TERMINAL TYPE: node .\server\connect.cjs
+//NOW TO RUN: node .\src\app\server\connect.cjs
 //MUST RUN WITH npm run dev for react, start server first!
 // - TODO set up code to launch both at the same time
 // - TODO set up a notification for when account is made + clear text boxes
@@ -18,36 +19,60 @@ app.use(express.json())
 //connect
 mongoose.connect("mongodb+srv://willi44c:tropical_traverse@cluster0.sgw9ryn.mongodb.net/Tropical_Traverse")
 
-const Schema = mongoose.Schema;
-const userAccSchema = new Schema({
+const userSchema = mongoose.Schema;
+const userAccSchema = new userSchema({
     nameF: String,
+    nameL: String,
     username: String,
     email: String,
     password: String,
     type: String
 })
 
-const Account = mongoose.model('userAcc', userAccSchema);
+const driverSchema = mongoose.Schema;
+const driverAccSchema = new driverSchema({
+    nameF: String,
+    nameL: String,
+    username: String,
+    email: String,
+    password: String,
+    vehicle: String,
+    license: String,
+    stateID: String,
+    licenseImg: String,
+    type: String
+})
+
+
+//const Account = mongoose.model('userAcc', userAccSchema);
+
+const UserModel = mongoose.model('UserAcc', userAccSchema);
+const DriverModel = mongoose.model('DriverAcc', driverAccSchema);
 
 app.post('/userAccounts', async (req, res) => {
     try{
-        const { username, email } = req.body;
+        const { username, email, type } = req.body;
+        let Model;
 
-        const checkUser = await Account.findOne({ username })
-        const checkEmail = await Account.findOne({ email })
+        if (type === 'driver') {
+            Model = DriverModel;
+        } else {
+            Model = UserModel;
+        }
+
+        const checkUser = await Model.findOne({ username })
+        const checkEmail = await Model.findOne({ email })
 
             if(checkUser){
                 res.json("Username Exists")
             }else if (checkEmail){
                 res.json("email Exists")
-            }else{
-                const newUserAcc = new Account(req.body);
-
+            }else{                
+                const newUserAcc = new Model(req.body);
                 await newUserAcc.save();
                 res.status(201).send('Account created');
             }
 
-        
     }catch (err) {
         console.error(err);
         res.status(500).send('Error creating account');

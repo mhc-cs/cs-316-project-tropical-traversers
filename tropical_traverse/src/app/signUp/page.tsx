@@ -37,10 +37,10 @@ const CreateAcc: React.FC = () => {
       nameL: input.nameL,
       username: input.username,
       email: input.email,
-      password: input.password
+      password: input.password,
     }
 
-    axios.post('http://localhost:4000/create', newAcc)
+    axios.post('http://localhost:5000/userAccounts', newAcc)
   }
 
   const url = "/login/";
