@@ -39,6 +39,7 @@ const CreateAcc: React.FC = () => {
 
   const url = "/signUp/";
   const router = useRouter();
+  
   //input receiver, texts bars, and submit button
   return <div className ='container'>
 

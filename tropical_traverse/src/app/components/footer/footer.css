@@ -1,0 +1,39 @@
+.footer-container{
+    display: flex;
+    background-color: #F8C063;
+    margin-top: 6%;
+    color: white;
+    padding-top: 4%;
+    padding-left: 6%;
+}
+
+.footer-left{
+    padding-right: 7%;
+}
+
+.logo-bottom{
+    width: 25%;
+    height: auto;
+    position: relative;
+    left: 15%;
+}
+
+.footer-middle{
+    padding-right: 7%;
+}
+
+h6{
+    display: flex;
+    font-weight: normal;
+    padding-top: 2%;
+    font-size: 98%;
+}
+
+p{
+    padding-bottom: 5%;
+    font-size: 115%;
+}
+
+.copyright{
+    padding-right: 0.5%;
+}

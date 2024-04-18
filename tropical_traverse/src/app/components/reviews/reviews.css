@@ -1,0 +1,24 @@
+.review-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews{
+    width: 85%;
+}
+
+.rev-item{
+    background-color: #1A5C74;
+    margin-bottom: 3.5%;
+    padding: 3%;
+    color: white;
+}
+
+.reviews-title{
+    color: #7D7D7D;
+    font-size: 270%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}

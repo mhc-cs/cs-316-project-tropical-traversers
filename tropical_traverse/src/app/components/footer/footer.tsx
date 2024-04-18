@@ -1,5 +1,7 @@
 import logo from '../../assets/island_tours.png';
 import Image from 'next/image';
+import './footer.css';
+
 
 
 export default function Page() {
@@ -7,24 +9,24 @@ export default function Page() {
     <>
     <div className="footer-container">
         <div className='footer-left'>
-            <Image className="logo" src={logo} alt={'company logo'}/> 
-            <h5>Contact: Phone: +1 (555) 123-4567</h5>
-            <h5>Email: info@islandtours.com</h5>
+            <Image className="logo-bottom" src={logo} alt={'company logo'}/> 
+            <p>Contact: Phone: +1 (555) 123-4567</p>
+            <p>Email: info@islandtours.com</p>
         </div>
         <div className='footer-middle'>
-            <h5>Privacy Policy</h5>
-            <h5>Terms of Service </h5>
-            <h5>Do not sell or share my personal information</h5>
-            <h6><p>&copy;</p>Island Tours. All rights reserved</h6>
+            <p>Privacy Policy</p>
+            <p>Terms of Service </p>
+            <p>Do not sell or share my personal information</p>
+            <h6><p className='copyright'>&copy;</p>Island Tours. All rights reserved</h6>
         </div>
         <div className='footer-right'>
-            <h5>Plan a trip </h5>
-            <h5>Explore </h5>
-            <h5>Site Map</h5>
+            <p>Plan a trip</p>
+            <p>Explore </p>
+            <p>Site Map</p>
         </div>
 
     </div>
     </>
     );
-  }
+  } 
   
