@@ -55,21 +55,6 @@ const CreateAcc: React.FC = () => {
     };
 
     reader.readAsDataURL(file);
-
-    // try{
-    //     const pic = event.target.files[0];
-    //     setInput(prevInput => ({
-    //       ...prevInput,
-    //       [question]: pic
-    //     }));
-
-        // setFilename(pic.name);
-        //const objectURL = URL.createObjectURL(file);
-        
-    // }
-    // catch(error){
-    //     console.error('Error creating object URL:', error);
-    // }
 }
 
   //click event handler
@@ -109,12 +94,21 @@ console.log('Preview URL:', previewURL);
             <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password" type='password'></input>
             <input onChange={handleChange} name="vehicle" value = {input.vehicle}  className="form-control" placeholder="Vehicle Model"></input>
             <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number"></input>
+            <label>
+              Where do you drive?
+              <select name="selectedLocation">
+                <option value="kingston">Kingston</option>
+                <option value="montegobay">Montego Bay</option>
+                <option value="negril">Negril</option>
+                <option value="falmouth">Falmouth</option>
+                <option value="ochorios">Ocho Rios</option>
+                <option value="portmore">Portmore</option>
+              </select>
+            </label>
             <label htmlFor="stateID">State ID:</label>
             <input onChange={(e) => handlePics(e, 'stateID')} name="stateID"  className="form-control" type='file'></input>
-            {/* {previewURL && (<img src={previewURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '200px' }}/>)} */}
             <label htmlFor="licenseImg">License:</label>
             <input onChange={(e) => handlePics(e, 'licenseImg')} name="licenseImg"  className="form-control" type='file'></input>
-            {/* {previewURL && (<img src={previewURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '200px' }}/>)} */}
             <button onClick={handleClick}className="btn btn-lg btn-info">Create Account</button>
             <span>Already have an account? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Login here</b></button> </span>
         </form>
