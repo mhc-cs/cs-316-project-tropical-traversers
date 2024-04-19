@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "PORT=31600 next start",
     "lint": "next lint"
+    
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
