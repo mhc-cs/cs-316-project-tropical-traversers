@@ -1,4 +1,4 @@
-"useclient";
+"use client";
 
 import './infoList.css';
 import destination1 from "../../assets/top_destinations/dest1.jpg";

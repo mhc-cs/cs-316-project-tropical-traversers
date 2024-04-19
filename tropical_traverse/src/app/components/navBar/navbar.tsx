@@ -22,8 +22,8 @@ export default function NavBar(){
             <Image className="logo" src={logo} alt={'company logo'} onClick={(event) => { event.preventDefault(); router.push("/"); }}/> 
             <ul>
                 <li><a onClick={(event) => { event.preventDefault(); router.push("/"); }}>Home</a></li>
-                <li><a onClick={(event) => { event.preventDefault(); router.push(url); }}>Drivers</a></li>
-                <li><a onClick={(event) => { event.preventDefault(); router.push(url); }}>Contact</a></li>
+                <li><a onClick={(event) => { event.preventDefault(); router.push("/driversPage/"); }}>Drivers</a></li>
+                <li><a onClick={(event) => { event.preventDefault(); router.push("/contact"); }}>Contact</a></li>
             </ul>        
         </div>
         </>
