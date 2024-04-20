@@ -138,14 +138,13 @@ console.log('Preview URL:', previewURL);
     <div className ='container'>
         <form ref={formRef} onSubmit={handleFormSubmit}>
             <h1>Create Account</h1>
-<<<<<<< HEAD
-            <input onChange={handleChange} name="nameF" value = {input.nameF} className="form-control" placeholder="First Name"></input>
-            <input onChange={handleChange} name="nameL" value = {input.nameL} className="form-control" placeholder="Last Name"></input>
-            <input onChange={handleChange} name="username" value = {input.username} className="form-control" placeholder="Username"></input>
-            <input onChange={handleChange} name="email" value = {input.email} className="form-control" placeholder="Email"></input>
-            <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password" type='password'></input>
-            <input onChange={handleChange} name="vehicle" value = {input.vehicle}  className="form-control" placeholder="Vehicle Model"></input>
-            <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number"></input>
+            <input onChange={handleChange} name="nameF" value = {input.nameF} className="form-control" placeholder="First Name*" required></input>
+            <input onChange={handleChange} name="nameL" value = {input.nameL} className="form-control" placeholder="Last Name*" required></input>
+            <input onChange={handleChange} name="username" value = {input.username} className="form-control" placeholder="Username*" required></input>
+            <input onChange={handleChange} name="email" value = {input.email} className="form-control" placeholder="Email*" required></input>
+            <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password*" type='password' required></input>
+            <input onChange={handleChange} name="vehicle" value = {input.vehicle}  className="form-control" placeholder="Vehicle Model*" required></input>
+            <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number*" required></input>
             <label>
               Where do you drive?
               <select name="selectedLocation">
@@ -157,19 +156,6 @@ console.log('Preview URL:', previewURL);
                 <option value="portmore">Portmore</option>
               </select>
             </label>
-            <label htmlFor="stateID">State ID:</label>
-            <input onChange={(e) => handlePics(e, 'stateID')} name="stateID"  className="form-control" type='file'></input>
-            <label htmlFor="licenseImg">License:</label>
-            <input onChange={(e) => handlePics(e, 'licenseImg')} name="licenseImg"  className="form-control" type='file'></input>
-            <button onClick={handleClick}className="btn btn-lg btn-info">Create Account</button>
-=======
-            <input onChange={handleChange} name="nameF" value = {input.nameF} className="form-control" placeholder="First Name*" required></input>
-            <input onChange={handleChange} name="nameL" value = {input.nameL} className="form-control" placeholder="Last Name*" required></input>
-            <input onChange={handleChange} name="username" value = {input.username} className="form-control" placeholder="Username*" required></input>
-            <input onChange={handleChange} name="email" value = {input.email} className="form-control" placeholder="Email*" required></input>
-            <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password*" type='password' required></input>
-            <input onChange={handleChange} name="vehicle" value = {input.vehicle}  className="form-control" placeholder="Vehicle Model*" required></input>
-            <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number*" required></input>
             <label htmlFor="stateID">State ID*:</label>
             <input onChange={(e) => handlePics(e, 'stateID')} name="stateID"  className="form-control" type='file' required></input>
             {/* {previewURL && (<img src={previewURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '200px' }}/>)} */}
@@ -177,7 +163,6 @@ console.log('Preview URL:', previewURL);
             <input onChange={(e) => handlePics(e, 'licenseImg')} name="licenseImg"  className="form-control" type='file' required></input>
             {/* {previewURL && (<img src={previewURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '200px' }}/>)} */}
             <button className="btn btn-lg btn-info">Create Account</button>
->>>>>>> dev-c
             <span>Already have an account? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Login here</b></button> </span>
         </form>
     </div>
