@@ -23,7 +23,7 @@ export default function NavBar(){
             <ul>
                 <li><a onClick={(event) => { event.preventDefault(); router.push("/"); }}>Home</a></li>
                 <li><a onClick={(event) => { event.preventDefault(); router.push("/driversPage/"); }}>Drivers</a></li>
-                <li><a onClick={(event) => { event.preventDefault(); router.push("/contact"); }}>Contact</a></li>
+                <li><a onClick={(event) => { event.preventDefault(); router.push("/components/contact"); }}>Contact</a></li>
             </ul>        
         </div>
         </>

@@ -44,7 +44,7 @@ export default function Page() {
                     <div className="rev-item" key={i}>
                         <div className="item-title-review">
                             <h2 className="client-name">{review.name}</h2>
-                            <div className="rating"><Rating name="read-only" value={value} readOnly /></div>
+                            <div className="rating-star"><Rating name="read-only" value={value} readOnly /></div>
                         </div>
                         <div className="item-content-review">{review.review}</div>
                     </div>

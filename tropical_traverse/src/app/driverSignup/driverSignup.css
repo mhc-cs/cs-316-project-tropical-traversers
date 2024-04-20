@@ -36,7 +36,7 @@ h1{
     &::placeholder{
         color: lightgrey;
     }
-}
+} 
 
 .btn{
     margin: 3%;
