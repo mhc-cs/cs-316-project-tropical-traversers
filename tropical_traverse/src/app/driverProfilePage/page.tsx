@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <>
     <div className="profilePage-wrapper">
-        <NavBar isLoggedIn={true}/>
+        <NavBar isLoggedIn={false}/>
         <Image src={bg} alt="profile background" className="bg" />
         <Image src={profile} alt="profile picture" className="profile_pic" />
         <div>

@@ -1,6 +1,5 @@
 "use client";
 
-
 import destination1 from "../assets/top_destinations/dest1.jpg";  //import pictures here 
 import destination2 from "../assets/top_destinations/dest2.jpg";
 import destination3 from "../assets/top_destinations/dest3.jpg";
