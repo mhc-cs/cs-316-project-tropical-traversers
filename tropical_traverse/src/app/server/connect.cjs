@@ -10,7 +10,9 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 const mongoose = require("mongoose")
-require ("dotenv").config({path: "./config.env"})
+const dotenv = require("dotenv")
+
+dotenv.config({path: "./config.env"})
 
 const PORT = process.env.PORT || 5000;
 app.use(cors())
@@ -18,6 +20,7 @@ app.use(express.json())
 
 //connect
 mongoose.connect("mongodb+srv://willi44c:tropical_traverse@cluster0.sgw9ryn.mongodb.net/Tropical_Traverse")
+//mongoose.connect(process.env.MONGO_URI)
 
 const userSchema = mongoose.Schema;
 const userAccSchema = new userSchema({
@@ -38,9 +41,13 @@ const driverAccSchema = new driverSchema({
     password: String,
     vehicle: String,
     license: String,
+    location: String,
     stateID: String,
     licenseImg: String,
-    type: String
+    type: String,
+    drives: Number,
+    rating: Number,
+    exp: Number
 })
 
 
@@ -79,6 +86,17 @@ app.post('/userAccounts', async (req, res) => {
     }
 })
 
+app.get('/userAccounts', async (req, res) => {
+    try {
+      // Fetch all drivers
+      const drivers = await DriverModel.find({});
+      res.status(200).json(drivers);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Error fetching driver accounts');
+    }
+  });
+  
 //require route
 app.listen(PORT, () => {
     console.log("Exppress Server is running on port ${PORT}")
