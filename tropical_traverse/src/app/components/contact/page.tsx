@@ -38,7 +38,7 @@ export default function Page() {
 
     return (
       <>
-      <NavBar/>
+      <NavBar isLoggedIn={false}/>
       <div className="contact-container">
         <div className="top-contact">
           <p className="contact-text">Get in touch <br /> with us</p>
@@ -51,10 +51,16 @@ export default function Page() {
             <input onChange={(e) => setFirstName(e.target.value)} value={firstName} className="form-class" type="text" placeholder="First name"/>
             <input onChange={(e) => setLastName(e.target.value)} value={lastName} className="form-class" type="text" placeholder="Last name"/>
             <input onChange={(e) => setEmail(e.target.value)} value={email} className="form-class" type="email" placeholder="Email"/>
-            <textarea onChange={(e) => setMessage(e.target.value)} value={message} className="form-class" name="Message" placeholder="Message"></textarea>
+            <textarea onChange={(e) => setMessage(e.target.value)} value={message} className="form-class message" name="Message" placeholder="Message"></textarea>
             <button className="submit-contact" type="submit">Submit</button>
           </form>
         </div>
+        <div className="left-side">
+            <p className="contact-label">Telephone</p>
+            <p className="contact-info">+1 (800)4653921</p>
+            <p className="contact-label">Email</p>
+            <p className="contact-info">islandtours@islandtours.org</p>
+          </div>
       </div>
       <Footer/>
       </>

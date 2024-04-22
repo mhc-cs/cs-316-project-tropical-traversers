@@ -23,7 +23,7 @@ const IMAGES = [tropics1, tropics2, tropics3, tropics4, tropics5, tropics6, trop
 export default function Page() {
   return (
     <>
-     <NavBar/>
+     <NavBar isLoggedIn={true}/>
      <Carousel imageURLs = {IMAGES}/>
      <TopThings/>
      <Reviews/>

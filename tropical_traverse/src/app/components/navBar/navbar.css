@@ -11,6 +11,12 @@
     text-align: right;
 }
 
+.account-icon{
+    flex: 3;
+    padding-right: 3.5%;
+    padding-top: 1%;
+}
+
 .button{
     color: #FFFFFF;
     background-color: #F4CE39;
@@ -54,4 +60,19 @@ ul li{
     font-size: 15px;
     cursor: pointer;
     color: #7D7D7D;
+}
+
+.dropdownOptions{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 12%;
+    height: auto;
+    position: absolute;
+    right: 0%;
+}
+
+.option{
+    /* color: white; */
+    box-sizing: border-box;
 }

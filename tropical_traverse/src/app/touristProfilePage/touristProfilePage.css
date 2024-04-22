@@ -1,0 +1,114 @@
+.bg{
+    width: 100%;
+    height: 60vh;
+}
+
+.profile_pic{
+    width: 15%;
+    height: auto;
+    border-radius: 100%;
+    position: absolute;
+    left: 45%;
+    top: 63%;
+}
+
+.profilePage-wrapper{
+    background-color: #F1F1F1;
+}
+
+.under-image{
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-bottom: 7%;
+}
+
+.full-name{
+    font-size: 140%;
+    position: relative;
+    right: 3%;
+}
+
+.locality{
+    font-size: 90%;
+    color: #7D7D7D;
+    position: relative;
+    margin-top: -4%;
+}
+
+.rating-driverr{
+    position: relative;
+    right: 4%;
+    margin-top: -3%;
+}
+
+.lower-bar-wrapper{
+    display: flex;
+}
+
+.trips-profile{
+    /* padding-right: 10%; */
+    position: relative;
+    right: 5%;
+}
+
+.experience-profile{
+    position: relative;
+    right: 25%;
+    padding-left: 30%;
+}
+
+.expereicne-years{
+    position: relative;
+    left: 30%;
+}
+
+.label{
+    font-size: 85%;
+}
+
+.form-wrapper-wrapper{
+    display: flex;
+    margin-left: 20%;
+}
+
+.wp{
+    padding-bottom: 3%;
+    position: relative;
+}
+
+.in{
+    background-color: white;
+    width: 400px;
+    height: 70px;
+    color: #7D7D7D;
+    border-radius: 10px;
+    padding-left: 6%;
+    padding-top: 6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left{
+    position: relative;
+    right: 0%;
+}
+
+.right{
+    margin-left: 10%;
+}
+
+.aboutme-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    font-size: 120%;
+}
+
+.about-me{
+    width: 76%;
+    height: 40vh;
+    margin-top: 2%;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

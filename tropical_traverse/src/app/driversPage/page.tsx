@@ -7,7 +7,6 @@ import destination3 from "../assets/top_destinations/dest3.jpg";
 import destination4 from "../assets/top_destinations/dest4.jpg";
 import destination5 from "../assets/top_destinations/dest5.jpg";
 import destination6 from "../assets/top_destinations/dest6.jpg";
-import { StaticImageData } from "next/image";
 import { useState } from "react";
 import Image from 'next/image';
 import "./driversPage.css";
@@ -23,15 +22,11 @@ export default function Page() {
         { src: destination4, name: "Jermaine", car: "Mitsubishi Outlander", trips: 300, rating: 4.6, experience: 6 },
         { src: destination5, name: "Tashana", car: "Kia Rio", trips: 250, rating: 4.5, experience: 7 },
         { src: destination6, name: "Michael", car: "Hyundai Elantra", trips: 180, rating: 4.6, experience: 4 }];
-      
-      type ImageSliderProps = {
-        imageURLs: StaticImageData[]
-      }
 
     return (
       <>
       <div className="main-container">
-      <NavBar/>
+      <NavBar isLoggedIn={true}/>
         <div className="topest_container">
             <span className="title">Top drivers</span>
             </div>
