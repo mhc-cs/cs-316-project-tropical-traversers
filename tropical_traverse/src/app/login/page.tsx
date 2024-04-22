@@ -5,7 +5,7 @@ import axios from "axios";
 import "./login.css";
 import router, { useRouter } from "next/navigation";
 
-const CreateAcc: React.FC = () => {
+const logIn: React.FC = () => {
 
   
   //account constants for data
@@ -53,4 +53,4 @@ const CreateAcc: React.FC = () => {
   </div>
 }
 
-export default CreateAcc;
+export default logIn;
