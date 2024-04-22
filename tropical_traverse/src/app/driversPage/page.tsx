@@ -13,6 +13,7 @@ import Image from 'next/image';
 import "./driversPage.css";
 import NavBar from "../components/navBar/navbar";
 import Footer from "../components/footer/footer";
+import Filter from "../components/filter/filter"
 
 import axios from 'axios'
 
