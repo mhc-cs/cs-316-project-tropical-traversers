@@ -52,6 +52,7 @@ form {
     border-radius: 4px;
     cursor: pointer;
     width: 40%;
+    font-size: 100%;
   }
 
 .contact-label{

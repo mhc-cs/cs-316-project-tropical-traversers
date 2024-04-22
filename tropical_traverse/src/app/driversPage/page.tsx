@@ -12,6 +12,7 @@ import Image from 'next/image';
 import "./driversPage.css";
 import NavBar from "../components/navBar/navbar";
 import Footer from "../components/footer/footer";
+import Filter from "../components/filter/filter";
 
 export default function Page() {
 
@@ -27,6 +28,7 @@ export default function Page() {
       <>
       <div className="main-container">
       <NavBar isLoggedIn={true}/>
+      <Filter/>
         <div className="topest_container">
             <span className="title">Top drivers</span>
             </div>
