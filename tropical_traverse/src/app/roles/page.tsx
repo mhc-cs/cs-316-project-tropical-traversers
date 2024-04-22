@@ -6,8 +6,6 @@ export default function Roles(){
 
   function handlePics (event:React.ChangeEvent<HTMLInputElement>) {
     console.log(event.target);
-// console.log(e.target.files);
-// setFile(URL.createObjectURL(e.target.files[0]));
 }
 
   const urlsignup = "/signUp/";

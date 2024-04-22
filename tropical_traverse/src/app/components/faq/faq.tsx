@@ -51,7 +51,7 @@ export default function Page() {
         <h3 className="faq-title">FAQs</h3>
         <div className="faqs">
             {ques.map((q, i) =>(
-                <div className="faq-item">
+                <div key={i} className="faq-item">
                     <div className="item-title" onClick={() => toggle(i)}>
                         <h2>{q.question}</h2>
                         <span><ChevronDown /></span>
