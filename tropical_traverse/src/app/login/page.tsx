@@ -4,37 +4,48 @@ import React, { useState } from 'react';
 import axios from "axios";
 import "./login.css";
 import router, { useRouter } from "next/navigation";
+import { useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-const logIn: React.FC = () => {
+const App: React.FC = () => {
+  return(
+    <Router>
+      <LogIn />
+    </Router>
+  );
+};
 
-  
-  //account constants for data
-  const [input, setInput] = useState({
-    username: '',
-    password: ''
-  })
+const LogIn: React.FC = () => {
 
-  //input type event handler
-  function handleChange(event:React.ChangeEvent<HTMLInputElement>){
-    const {name, value} = event.target;
-  
-    setInput(prevInput => {
-      return{
-        ...prevInput,
-        [name]: value
-      }
-    })
-  }
+  const history=useNavigate();
 
-  //click event handler
-  function handleClick(event:React.MouseEvent<HTMLButtonElement>) {
-    event.preventDefault()
-    const newAcc = {
-      username: input.username,
-      password: input.password
+  const[username, setUsername] = useState('')
+  const[password, setPassword] = useState('')
+
+  async function submit(event:React.MouseEvent<HTMLButtonElement>){
+    event.preventDefault();
+
+    try{
+      await axios.post('http://localhost:5000/userAccounts', {
+        username,
+        password
+      })
+      .then(res => {
+        if(res.data = "exist"){
+          //redirect to the home page
+          history("/", {state:{id:username}})
+        }else if(res.data = "does not exist"){
+          //redirect to the home page
+          alert("User is not logged in.")
+        }
+      })
+      .catch(err => {
+        alert("Incorrect information.")
+        console.log(err);
+      })
+    }catch(err){
+      console.log(err)
     }
-
-    axios.post('http://localhost:5000/userAccounts', newAcc)
   }
 
   const url = "/signUp/";
@@ -45,12 +56,13 @@ const logIn: React.FC = () => {
 
       <form>
       <h1>Login</h1>
-        <input onChange={handleChange} name="username" value = {input.username} className="form-control" placeholder="Username"></input>
-        <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password"></input>
-        <button onClick ={handleClick}className="btn btn-lg btn-info">Login</button>
+        <input type="email" onChange={(event) => { setUsername(event.target.value) }} placeholder="Username"  />
+        <input type="password" onChange={(event) => { setPassword(event.target.value) }} placeholder="Password"  />
+        <button onClick={submit}>Submit</button>
         <span>New to Island Tours? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Create Account</b></button>  </span>
       </form>
   </div>
 }
+export {LogIn}
 
-export default logIn;
+export default App;
