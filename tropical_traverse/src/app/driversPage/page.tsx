@@ -1,18 +1,19 @@
 "use client";
 
-import destination1 from "../assets/top_destinations/dest1.jpg";  //import pictures here 
-import destination2 from "../assets/top_destinations/dest2.jpg";
-import destination3 from "../assets/top_destinations/dest3.jpg";
-import destination4 from "../assets/top_destinations/dest4.jpg";
-import destination5 from "../assets/top_destinations/dest5.jpg";
-import destination6 from "../assets/top_destinations/dest6.jpg";
+import destination1 from "../assets/profiles/profile1.jpg";  //import pictures here 
+import destination2 from "../assets/profiles/profile2.jpg";
+import destination3 from "../assets/profiles/profile3.jpg";
+import destination4 from "../assets/profiles/profile4.jpg";
+import destination5 from "../assets/profiles/profile5.jpg";
+import destination6 from "../assets/profiles/profile6.jpg";
 import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import "./driversPage.css";
 import NavBar from "../components/navBar/navbar";
 import Footer from "../components/footer/footer";
-import Filter from "../components/filter/filter"
+import Filter from "../components/filter/filter";
+import router, { useRouter } from "next/navigation";
 
 import axios from 'axios'
 
@@ -82,9 +83,7 @@ export default function Page() {
     .catch(err => console.log(err))
   }, [])
 
-      // type ImageSliderProps = {
-      //   imageURLs: StaticImageData[]
-      // }
+  const router = useRouter();
 
     return (
       <>
@@ -94,7 +93,7 @@ export default function Page() {
         <div className="topest_container">
             <span className="title">Top Drivers</span>
             </div>
-            <div className="main-wrapper">
+            <div className="main-wrapper" onClick={(event) => { event.preventDefault(); router.push("/bookDriver"); }}>
             {destImages.map((imageUrl, index) => (
                 <div key={index} className='image-wrapper1'>
                     <div className="image-container1">

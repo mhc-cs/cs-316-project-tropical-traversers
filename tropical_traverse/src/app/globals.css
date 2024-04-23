@@ -2,6 +2,11 @@
   --foreground-rgb: 0, 0, 0;
 }
 
+@font-face {
+  font-family: 'PPGatwick';
+  src: url(../fonts/pp-gatwick/PPGatwick-Ultralight.otf) format("otf");
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -45,7 +50,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-roboto-mono);
+  /* font-family: var(--font-roboto-mono); */
+  font-family: 'PPGatwick';
 }
 
 body {

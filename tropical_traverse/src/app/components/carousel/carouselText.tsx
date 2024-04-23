@@ -13,7 +13,8 @@ export default function carouselText(){
         <div>
             <h1 className="welcomeText">Wa gwan</h1>
             <h3 className="travelText">Travel to Jamaica</h3>
-            <button className='plan_trip' onClick={() => router.push("/driversPage")}>Book a driver</button>
+            {/* <button className='plan_trip' onClick={() => router.push("/driversPage")}>Book a driver</button> */}
+            <button className='plan_trip' onClick={() => router.push("/bookDriver")}>Book a driver</button>
         </div>
         </>
     );

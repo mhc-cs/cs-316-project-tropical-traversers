@@ -169,6 +169,15 @@ console.log('Preview URL:', previewURL);
             <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number" required></input>
             <label>
               Where do you drive?
+              <select name="selectedLocation" >
+                <option value="select">Select One</option>
+                <option value="kingston">Kingston</option>
+                <option value="montegobay">Montego Bay</option>
+                <option value="negril">Negril</option>
+                <option value="falmouth">Falmouth</option>
+                <option value="ochorios">Ocho Rios</option>
+                <option value="portmore">Portmore</option>
+              </select>
               <select name="selectedLocation" value = {input.location} onChange={handleSelectChange} required>
                 <option value="select">Select One</option>
                 <option value="kingston">Kingston</option>
