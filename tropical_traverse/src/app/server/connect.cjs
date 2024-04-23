@@ -86,6 +86,23 @@ app.post('/userAccounts', async (req, res) => {
     }
 })
 
+app.post('/userAccounts', async (req, res) => {
+    const{username,password} = req.body
+
+    try{
+        const checkUser = await Model.findOne({ username })
+        const checkPassword = await Model.findOne({ password })
+
+        if(checkUser){
+            res.json("exist")
+        }else{
+            res.json("does not exist")
+        }
+    }catch(err){
+        res.json("does not exist")
+    }
+})
+
 app.get('/userAccounts', async (req, res) => {
     try {
       // Fetch all drivers
