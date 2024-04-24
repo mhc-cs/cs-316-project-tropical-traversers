@@ -1,0 +1,120 @@
+
+.bookDriver-wrapper{
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-right: 15%;
+    margin-bottom: 20%;
+    background-color:#fccd82;
+    /* background-color:#974c5d; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding:5% 13% 5% 10%;
+    border-radius: 9px;
+}
+
+.bookDriver-title{
+    margin-left: 33%;
+    margin-top: 5%;
+    font-size: 300%;
+    color:#fefefe;
+}
+
+.subtext{
+    margin-left: 30%;
+    margin-top: 2%;
+    font-size: 110%;
+    color: #f3f2f2;
+}
+
+.dates-from-to{
+    display: flex;
+    position: relative;
+    left: 25%;
+    /* background-color: white; */
+}
+
+.from-to{
+    font-size: 100%;
+}
+
+.datepicker{
+    height: 50px;
+    background-color: white;
+}
+
+.date-to{
+    padding-right: 8%;
+    border-radius: 10px;
+    padding-bottom: 6%;
+}
+
+.basic-info{
+    display: flex;
+
+}
+
+.wrapperd{
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
+    padding-bottom: 6%;
+}
+
+.second-row{
+    width: 15vw;
+    height: 50px;
+    font-size: 90%;
+    margin-top: 3%;
+    border: 1px solid #d3d1d1;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.second-row-label{
+    font-size: 100%;
+}
+
+.place{
+    position: relative;
+    bottom: 13%;
+}
+
+.datepicker{
+    width: 100%;
+}
+
+
+.size-info{
+    display: flex;
+}
+
+.adu-kid-acc-wrapper{
+    padding-right: 5%;
+}
+
+.thirdRow-label{
+    font-size: 100%;
+}
+
+.thirdRow{
+    width: 15vw;
+    height: 50px;
+    font-size: 90%;
+    margin-top: 3%;
+    border: 1px solid #d3d1d1;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.book-button{
+    width: 30%;
+    height: 5vh;
+    margin-top: 5.5%;
+    position: relative;
+    left: 38%;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #56b2b2;
+    color: white;
+    cursor: pointer;
+    font-size: 110%;
+}

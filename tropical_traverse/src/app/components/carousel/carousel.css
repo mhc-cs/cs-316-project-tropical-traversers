@@ -62,14 +62,20 @@
     background-color: #F4CE39;
     border: none;
     border-radius: 10px;
-    padding: 2%;
+    padding: 5% 7% 5% 7%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 6px 2%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
+    position: relative;
+    right: 3%;
+    transition: all .5s ease-in-out; 
+}
+
+.plan_trip:hover{
+    transform: scale(1.1);
 }
 
 /* style for text on the carousel */
@@ -83,11 +89,13 @@
 
 .welcomeText{
     color: #FFFFFF;
-    font-size: 500%;
+    font-size: 550%;
 }
 
 .travelText{
-    color: #2F342F;
-    font-size: 200%;
-    background: rgba(255, 255, 255, .15)
+    color: #c3c3c3;
+    font-size: 220%;
+    text-shadow: 2px 2px 4px #000000;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }

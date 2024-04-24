@@ -47,7 +47,7 @@ const LogIn: React.FC = () => {
       console.log(err)
     }
   }
-
+ 
   const url = "/signUp/";
   const router = useRouter();
   
@@ -56,9 +56,9 @@ const LogIn: React.FC = () => {
 
       <form>
       <h1>Login</h1>
-        <input type="email" onChange={(event) => { setUsername(event.target.value) }} placeholder="Username"  />
-        <input type="password" onChange={(event) => { setPassword(event.target.value) }} placeholder="Password"  />
-        <button onClick={submit}>Submit</button>
+        <input className='form-control' type="email" onChange={(event) => { setUsername(event.target.value) }} placeholder="Username"  />
+        <input className='form-control' type="password" onChange={(event) => { setPassword(event.target.value) }} placeholder="Password"  />
+        <button className='btn btn-lg btn-info' onClick={submit}>Submit</button>
         <span>New to Island Tours? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Create Account</b></button>  </span>
       </form>
   </div>

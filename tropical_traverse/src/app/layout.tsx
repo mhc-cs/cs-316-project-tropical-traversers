@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
-// import "../fonts/pp-gatwick/PPGatwick-Ultralight.otf"
 
-const inter = Inter({ subsets: ["latin"] });
+const fraunces = Fraunces({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Island Tours",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={fraunces.className}>{children}</body>
     </html>
   );
 }

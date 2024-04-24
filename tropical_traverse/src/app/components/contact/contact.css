@@ -41,6 +41,7 @@ form {
 
 .message{
     height: 15vh;
+    background-color: white;
 }
 
 .submit-contact {
