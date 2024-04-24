@@ -157,8 +157,9 @@ console.log('Preview URL:', previewURL);
   //input receiver, texts bars, and submit button
   return(
     <>
-    <div className ='container'>
-        <form ref={formRef} onSubmit={handleFormSubmit}>
+    <div className='container'>
+    <div className ='tainer'>
+        <form className='create-form' ref={formRef} onSubmit={handleFormSubmit}>
             <h1>Create Account</h1>
             <input onChange={handleChange} name="nameF" value = {input.nameF} className="form-control" placeholder="First Name" required></input>
             <input onChange={handleChange} name="nameL" value = {input.nameL} className="form-control" placeholder="Last Name" required></input>
@@ -167,18 +168,9 @@ console.log('Preview URL:', previewURL);
             <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password" type='password' required></input>
             <input onChange={handleChange} name="vehicle" value = {input.vehicle}  className="form-control" placeholder="Vehicle Model" required></input>
             <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number" required></input>
-            <label>
-              Where do you drive?
-              <select name="selectedLocation" >
-                <option value="select">Select One</option>
-                <option value="kingston">Kingston</option>
-                <option value="montegobay">Montego Bay</option>
-                <option value="negril">Negril</option>
-                <option value="falmouth">Falmouth</option>
-                <option value="ochorios">Ocho Rios</option>
-                <option value="portmore">Portmore</option>
-              </select>
-              <select name="selectedLocation" value = {input.location} onChange={handleSelectChange} required>
+            <label className='live'> 
+              <p className='sl'>Where do you drive?</p>
+              <select name="selectedLocation" value = {input.location} onChange={handleSelectChange} required className='live-options form-control'>
                 <option value="select">Select One</option>
                 <option value="kingston">Kingston</option>
                 <option value="montegobay">Montego Bay</option>
@@ -188,13 +180,14 @@ console.log('Preview URL:', previewURL);
                 <option value="portmore">Portmore</option>
               </select>
             </label>
-            <label htmlFor="stateID">State ID:</label>
+            <label htmlFor="stateID" className='sl'>State ID:</label>
             <input onChange={(e) => handlePics(e, 'stateID')} name="stateID"  className="form-control" type='file' required></input>
-            <label htmlFor="licenseImg">License:</label>
+            <label htmlFor="licenseImg" className='sl'>License:</label>
             <input onChange={(e) => handlePics(e, 'licenseImg')} name="licenseImg"  className="form-control" type='file' required></input>
             <button className="btn btn-lg btn-info">Create Account</button>
             <span>Already have an account? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Login here</b></button> </span>
         </form>
+    </div>
     </div>
     </>
   );

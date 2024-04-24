@@ -52,12 +52,12 @@ const LogIn: React.FC = () => {
   const router = useRouter();
   
   //input receiver, texts bars, and submit button
-  return <div className ='container'>
+  return <div className ='login-container'>
 
       <form>
       <h1>Login</h1>
-        <input className='form-control' type="email" onChange={(event) => { setUsername(event.target.value) }} placeholder="Username"  />
-        <input className='form-control' type="password" onChange={(event) => { setPassword(event.target.value) }} placeholder="Password"  />
+        <input className='loginform-control' type="email" onChange={(event) => { setUsername(event.target.value) }} placeholder="Username"  />
+        <input className='loginform-control' type="password" onChange={(event) => { setPassword(event.target.value) }} placeholder="Password"  />
         <button className='btn btn-lg btn-info' onClick={submit}>Submit</button>
         <span>New to Island Tours? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Create Account</b></button>  </span>
       </form>

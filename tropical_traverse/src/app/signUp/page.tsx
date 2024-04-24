@@ -79,15 +79,15 @@ const CreateAcc: React.FC = () => {
   const url = "/login/";
   const router = useRouter();
   //input receiver, texts bars, and submit button
-  return <div className ='container'>
+  return <div className ='signupContainer'>
 
       <form onSubmit={handleFormSubmit}>
       <h1>Create Account</h1>
-        <input onChange={handleChange} name="nameF" value = {input.nameF} className="form-control" placeholder="First Name" required></input>
-        <input onChange={handleChange} name="nameL" value = {input.nameL} className="form-control" placeholder="Last Name" required></input>
-        <input onChange={handleChange} name="username" value = {input.username} className="form-control" placeholder="Username" required></input>
-        <input onChange={handleChange} name="email" value = {input.email} className="form-control" placeholder="Email" required></input>
-        <input onChange={handleChange} name="password" value = {input.password}  className="form-control" placeholder="Password" type='password' required></input>
+        <input onChange={handleChange} name="nameF" value = {input.nameF} className="sigupform-control" placeholder="First Name" required></input>
+        <input onChange={handleChange} name="nameL" value = {input.nameL} className="sigupform-control" placeholder="Last Name" required></input>
+        <input onChange={handleChange} name="username" value = {input.username} className="sigupform-control" placeholder="Username" required></input>
+        <input onChange={handleChange} name="email" value = {input.email} className="sigupform-control" placeholder="Email" required></input>
+        <input onChange={handleChange} name="password" value = {input.password}  className="sigupform-control" placeholder="Password" type='password' required></input>
         <button className="btn btn-lg btn-info">Create Account</button>
         <span>Already have an account? <button onClick={(event) => { event.preventDefault(); router.push(url); }}><b>Login here</b></button> </span>
       </form>
