@@ -12,7 +12,10 @@ type ImageSliderProps = {
     imageURLs: StaticImageData[]
 }
 
+
 export default function Carousel({ imageURLs }: ImageSliderProps){
+
+    // code adapted from Web Dev Simplified (Youtube)
     const [imageIndex, setImageIndex] = useState(0)
 
     // function with algorithm to move a current image to the previous image

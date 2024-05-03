@@ -11,7 +11,6 @@ import { useEffect, useRef } from 'react';
 import Lottie from 'lottie-react';
 import CarAnimation from "../assets/moving_car.json";
 
-// {driverName}:{driverNanme:string}
 
 type ValuePiece = Date | null;  //for the date
 type Value = ValuePiece | [ValuePiece, ValuePiece];  //for the date

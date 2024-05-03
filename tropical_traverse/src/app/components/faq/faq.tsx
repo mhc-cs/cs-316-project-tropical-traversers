@@ -5,7 +5,7 @@ import './faq.css'
 
 
 export default function Page() {
-
+    // code adapted from the Tech Team (youtube)
     const [selected, setSelected] = useState(null)
     const toggle = (i) =>{
         if (selected === i){
