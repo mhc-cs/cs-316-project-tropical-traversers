@@ -113,6 +113,60 @@ app.get('/userAccounts', async (req, res) => {
       res.status(500).send('Error fetching driver accounts');
     }
   });
+
+  //Checking for existing account at login
+  app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+  
+    try {
+    //   const user = await User.findOne({ username });
+        const checkDriver = await DriverModel.findOne({ username, password })
+        const checkUser = await UserModel.findOne({ username, password })
+        
+        if (checkDriver || checkUser){
+            res.status(200).json({success: true})
+        }else{
+            res.statusapply(401).json({success: true})
+        }
+    } catch (error) {
+      console.error('Error during login:', error);
+      res.status(201).json({ error: 'Server error' });
+    }
+  });
+
+  app.get('/accountDisplay', async (req, res) => {
+    const {username} = req.query;
+    try {
+      const driver = await DriverModel.findOne({username});
+  
+      if (driver) {
+        res.status(210).json(driver);
+      } else {
+        res.status(404).json({ error: 'Driver not found' });
+      }
+    } catch (error) {
+      console.error('Error fetching driver data:', error);
+      res.status(500).json({ error: 'Server error' });
+    }
+  });
+  
+
+//   app.post('/accountDisplay', async (req, res) =>{
+//     const {username} = req.body;
+//     try {
+//         const driver = await DriverModel.findOne({username});
+
+//         if(driver){
+//             res.status(300).json(driver);
+//         }else{
+//             res.status(304).json({error: 'Error finding data - Driver not found'});
+//         }
+//     }catch(error){
+//         console.error('Error fetching driver data:', error);
+//         res.status(306).json({error: 'Server Error'});
+//     }
+//   })
+  
   
 //require route
 app.listen(PORT, () => {

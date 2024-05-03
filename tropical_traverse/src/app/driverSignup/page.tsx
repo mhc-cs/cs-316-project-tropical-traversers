@@ -170,7 +170,7 @@ console.log('Preview URL:', previewURL);
             <input onChange={handleChange} name="license" value = {input.license}  className="form-control" placeholder="License Number" required></input>
             <label className='live'> 
               <p className='sl'>Where do you drive?</p>
-              <select name="selectedLocation" value = {input.location} onChange={handleSelectChange} required className='live-options form-control'>
+              <select name="location" value = {input.location} onChange={handleSelectChange} required className='live-options form-control'>
                 <option value="select">Select One</option>
                 <option value="kingston">Kingston</option>
                 <option value="montegobay">Montego Bay</option>
