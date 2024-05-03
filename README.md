@@ -14,9 +14,9 @@ This project uses Next.js with Typescript, JavaScript and CSS for the frontend c
 5. Run: __ddd__ to connect to the database 
 
 ### Packages needed:
-@emotion/react: ver 11.11.4 <br />
+@emotion/react: ver 11.11.4 \
 @emotion/styled: ver 11.11.5 \
-@mui/icons-material: ver 5.15.15 \ 
+@mui/icons-material: ver 5.15.15 \
 @mui/material: ver 5.15.15 \
 axios: ver 1.6.8 \
 cors: ver 2.8.5 \
