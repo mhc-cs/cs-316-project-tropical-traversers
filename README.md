@@ -11,7 +11,7 @@ This project uses Next.js with Typescript, JavaScript and CSS for the frontend c
 2. Once set up, clone this website 
 3. Install packages needed on your local 
 4. Run: __npm run dev__ to start the react app 
-5. Run: __ddd__ to connect to the database 
+5. Run: __node .\src\app\server\connect.cjs__ to connect to the database 
 
 ### Packages needed:
 @emotion/react: ver 11.11.4 \
