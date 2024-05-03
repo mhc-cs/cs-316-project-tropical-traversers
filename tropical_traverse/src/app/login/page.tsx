@@ -5,7 +5,15 @@ import axios from "axios";
 import "./login.css";
 import router, { useRouter } from "next/navigation";
 import { useNavigate } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AccountProvider } from '../context/AuthContext';
+import { useContext } from 'react';
+
+//import context of account information
+import {useAccount} from '../context/AuthContext';
+import ProfilePage from '../driverProfilePage/page';
+
+//const mongoose = require("mongoose")
 
 const App: React.FC = () => {
   return(
@@ -19,6 +27,8 @@ const LogIn: React.FC = () => {
 
   const history=useNavigate();
 
+  //Create login varaible to store in context
+  const {setUserAccount} = useAccount();
   const[username, setUsername] = useState('')
   const[password, setPassword] = useState('')
 
@@ -26,23 +36,18 @@ const LogIn: React.FC = () => {
     event.preventDefault();
 
     try{
-      await axios.post('http://localhost:5000/userAccounts', {
+      const response = await axios.post('http://localhost:5000/login', {
         username,
         password
       })
-      .then(res => {
-        if(res.data = "exist"){
-          //redirect to the home page
-          history("/", {state:{id:username}})
-        }else if(res.data = "does not exist"){
-          //redirect to the home page
-          alert("User is not logged in.")
-        }
-      })
-      .catch(err => {
-        alert("Incorrect information.")
-        console.log(err);
-      })
+
+      if (response.data.success) {
+        setUserAccount({username});
+        history('/');
+      }else{
+        alert('Invalid username or password, try again.')
+      }
+      
     }catch(err){
       console.log(err)
     }
