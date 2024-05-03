@@ -26,6 +26,7 @@
     font-size: 140%;
     position: relative;
     right: 3%;
+    color: black;
 }
 
 .locality{
@@ -33,6 +34,7 @@
     color: #7D7D7D;
     position: relative;
     margin-top: -4%;
+    color: black;
 }
 
 .rating-driverr{
@@ -90,10 +92,12 @@
 .left{
     position: relative;
     right: 0%;
+    color: black;
 }
 
 .right{
     margin-left: 10%;
+    color: black;
 }
 
 .aboutme-wrapper{

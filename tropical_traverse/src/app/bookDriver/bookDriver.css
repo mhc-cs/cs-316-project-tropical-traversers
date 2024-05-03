@@ -29,16 +29,17 @@
     display: flex;
     position: relative;
     left: 25%;
-    /* background-color: white; */
 }
 
 .from-to{
     font-size: 100%;
+    color: black;
 }
 
 .datepicker{
     height: 50px;
     background-color: white;
+    color: black;
 }
 
 .date-to{
@@ -49,7 +50,7 @@
 
 .basic-info{
     display: flex;
-
+    color: black;
 }
 
 .wrapperd{
@@ -85,6 +86,7 @@
 
 .size-info{
     display: flex;
+    color: black;
 }
 
 .adu-kid-acc-wrapper{

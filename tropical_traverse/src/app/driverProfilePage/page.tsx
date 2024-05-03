@@ -101,7 +101,7 @@ const ProfilePage: React.FC = () => {
                                 <p className="locality">{driverData.location}</p>
                                 <p className="rating-driverr"><Rating name="read-only" value={5} readOnly size="large"/></p>
                                 <div className="lower-bar-wrapper">
-                                    <div className="trips-profile">
+                                    <div className="trips-profile"> 
                                         <p>{driverData.trips}</p>
                                         <span className="label">Trips</span>
                                     </div>

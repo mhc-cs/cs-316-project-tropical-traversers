@@ -63,7 +63,7 @@ export default function Page() {
                 <option value="portmore">Portmore</option>
               </select>
             </div>
-          </div>
+          </div> 
           <div className="size-info">
             <div className="adu-kid-acc-wrapper">
               <p className="thirdRow-label">Adults</p>
