@@ -4,4 +4,14 @@ Island Tours is a website that provides customers (tourists and drivers) with th
 
 It was created by Carissa Willis and Enam Dartey for Jade Morrison
 
+This project uses Next.js with Typescript, JavaScript and CSS for the frontend combined with MongoDB and Node on the backend.
+
+## Initial Porject Setup:
+1. Create a Next App using: 
+2. Once set up, clone this website 
+3. Install packages needed on your local 
+4. Run: __npm run dev__ to start the react app 
+5. Run: __ddd__ to connect to the database 
+
+### Packages needed:
 
