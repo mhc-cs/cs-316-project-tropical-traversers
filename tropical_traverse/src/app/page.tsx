@@ -25,14 +25,12 @@ const fraunces = Fraunces({ subsets: ['latin'] })
 export default function Page() {
   return (
     <>
-    {/* <main className="latin.main"> */}
     <NavBar isLoggedIn={true}/>
      <Carousel imageURLs = {IMAGES}/>
      <TopThings/>
      <Reviews/>
      <FAQs/>
      <Footer/>
-    {/* </main> */}
     </>
   );
 }
