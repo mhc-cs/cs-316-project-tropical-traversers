@@ -150,26 +150,8 @@ app.get('/userAccounts', async (req, res) => {
     }
   });
   
-
-//   app.post('/accountDisplay', async (req, res) =>{
-//     const {username} = req.body;
-//     try {
-//         const driver = await DriverModel.findOne({username});
-
-//         if(driver){
-//             res.status(300).json(driver);
-//         }else{
-//             res.status(304).json({error: 'Error finding data - Driver not found'});
-//         }
-//     }catch(error){
-//         console.error('Error fetching driver data:', error);
-//         res.status(306).json({error: 'Server Error'});
-//     }
-//   })
-  
-  
 //require route
 app.listen(PORT, () => {
-    console.log("Exppress Server is running on port ${PORT}")
+    console.log("Server is running...")
 
 })

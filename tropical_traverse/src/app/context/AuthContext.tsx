@@ -7,18 +7,14 @@ interface Account {
 interface AccountContextType{
     user: Account | null;
     setUserAccount: (userData: Account) => void;
+    logout: () => void;
 }
 
 const AccountContext = createContext<AccountContextType>({
     user: null,
     setUserAccount: () => {},
+    logout: () => {},
 })
-
-// //Creates default values
-// const AccountContext = createContext<{user: Account | null; login: (userData: Account) => void;}>({
-//     user: null,
-//     login: ()=> {},
-// });
 
 const AccountProvider: React.FC<{children: ReactNode}> = ({children}) => {
     const [user, setUser] = useState<Account | null>(null);
@@ -38,17 +34,18 @@ const AccountProvider: React.FC<{children: ReactNode}> = ({children}) => {
     }, []);
   
     const setUserAccount = (userData: Account) => {
+        localStorage.removeItem('user');
         localStorage.setItem('user', JSON.stringify(userData));
         setUser(userData);
     };
 
-    // const login = (userData: Account) => {
-    //   localStorage.setItem('user', JSON.stringify(userData));
-    //   setUser(userData);
-    // };
+    const logout = () => {
+        localStorage.removeItem('user');
+        setUser(null);
+    }
   
     return (
-      <AccountContext.Provider value={{user, setUserAccount}}>
+      <AccountContext.Provider value={{user, setUserAccount, logout}}>
         {children}
       </AccountContext.Provider>
     );
